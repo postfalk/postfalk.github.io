@@ -120,9 +120,34 @@
 
     <div id="ecoengine-2" class="step slide" data-x="4000" data-y="800">
         <p><strong>Data types and structures</strong></p>
-        <ul>
-            <li>Wieslander Vegetation Type Mapping <a href="http://vtm.berkeley.edu:8000">vtmveg.berkeley.edu:8000</li>
-        </ul>
+        <p><ul>
+            <li>Wieslander Vegetation Type Mapping <a href="http://vtm.berkeley.edu:8000">vtmveg.berkeley.edu:8000</a></li>
+            <li><a href="https://dev-ecoengine.berkeley.edu/api/observations/">/api/observations/</a></li>
+            <li><a href="https://dev-ecoengine.berkeley.edu/api/sensors/">/api/sensors/</a></li>
+            <li>List type data: several occurrences at one location/time</li>
+            <ul>
+                <li><a href="https://dev-ecoengine.berkeley.edu/api/checklists/">/api/checklists/</a></li>
+                <li><a href="https://dev-ecoengine.berkeley.edu/api/photos/">/api/photos/</a></li>
+            </ul>
+            <li>Geodata</li>
+        </ul></p>
+        <p class="question">Mind the trailing slash, yes it is https</p>
+        <br>
+        <p>We will add in the future: Soil data, pollen cores</p>
+    </div>
+
+    <div id="ecoengine-3" class="step slide" data-x="4000" data-y="1600">
+        <p><strong>Search engine</strong></p>
+        <br>
+        <p><a href="https://dev-ecoengine.berkeley.edu/api/search/?q=puma">/api/search/?q=puma</a></p>
+        <br>
+        <p>Retrieve results:</p>
+        <br>
+        <a href="https://dev-ecoengine.berkeley.edu/api/observations/?q=puma">/api/observations/?q=puma</a>
+        <p class="question">If you stick to the fields in the list view this will be very performative
+        since the data comes entirely from the index.</p>
+        <br>
+        <p>Use fields, extra, and exclude to control the amount of returned data.</p>
     </div>
 
     <div id="geo1" class="step slide" data-x="5000" data-y="0">
@@ -130,22 +155,26 @@
         <ul>
             <li>Data is in flux, always introspect models:</li>
             <ul>
-                <li>/api/layers/</li>
-                <li>/api/rstore/</li>
+                <li><a href="https://dev-ecoengine.berkeley.edu/api/layers/">/api/layers/</a></li>
+                    <li>search by tag and name</li><br>
+                <li><a href="https://dev-ecoengine.berkeley.edu/api/rstore/">/api/rstore/</a></li>
+                <li><a href="http://jsfiddle.net/postfalk/c734kL2c/">example</a>
             </ul>
         </ul>
 
     </div>
 
-    <div id="geo2" class="step slide" data-x="5000" data-y="800">
+<!--    <div id="geo2" class="step slide" data-x="5000" data-y="800">
         <p><strong>Map tiles</strong></p>
         <br>
         <a href="http://jsfiddle.net/postfalk/qqhcu9zm/1/">Example</a>
-    </div>
+    </div> -->
 
     <div id="discussion" class="step slide" data-x="6000" data-y="0">
         <q>Thank you!</q>
         <p>schuetzenmeister@berkeley.edu</p>
+        <br>
+        <p>slides: <a href="http://postfalk.github.io/stamen_intro/">postalk.github.io/stamen_intro/</a><p>
     </div>
 
 
