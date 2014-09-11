@@ -1,0 +1,158 @@
+<!doctype html>
+
+<!--
+    
+    So you'd like to know how to use impress.js?
+    
+    You've made the first, very important step - you're reading the source code.
+    And that's how impress.js presentations are built - with HTML and CSS code.
+    
+    Believe me, you need quite decent HTML and CSS skills to be able to use impress.js effectively.
+    And what is even more important, you need to be a designer, too, because there are no default
+    styles for impress.js presentations, there is no default or automatic layout for them.
+    
+    You need to design and build it by hand.
+    
+    So...
+    
+    Would you still like to know how to use impress.js?
+    
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>The Ecoinformatics Engine API</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="css/customized.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div id="front" class="step slide" data-x="0" data-y="0">
+        <p>Kick-off Meeting with Stamen</p>
+        <q>
+            <strong>The Ecoengine API</strong>
+        </q>
+        <p>Falk Schuetzenmeister</p>
+        <br>
+        <p>September 12, 2014</p>
+        <table>
+            <tr>
+                <td>Web Application Developer
+                Geospatial Innovation Facility
+                College of Natural Resources
+                schuetzenmeister@berkeley.edu
+                </td>
+                <td>
+                    <img class="small-img" src="img/holos.png">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div id="outline" class="step slide" data-x="1000" data-y="0">
+        <p><strong>Overview</strong></p>
+        <br>
+        <p>
+            <ul>
+                <li>Project Design</li>
+                <li>Holos: The Exploration and Discovery Tool</li>
+                <li>The Ecoengine API</li>
+                <li>Geospatial functionality</li>
+                <li>Questions</li>
+            </ul>
+        </p>
+    </div>
+
+
+    <div id="overview-1" class="step slide" data-x="2000" data-y="0">
+        <p><strong>Project Overview</strong></p>
+        <p><img src="img/model.jpg"></p>
+        <p><strong>Stack:</strong></p>
+        <p>Django Restframework, PostGIS, ElasticSearch, Mapnik</p>
+    </div>
+    
+
+    <div id="holos-1" class="step slide" data-x="3000" data-y="0">
+        <p><strong>Holos: Gateway, Library, Discovery</strong></p>
+        <p><a href="http://holos.berkeley.edu">holos.berkeley.edu</a></p>
+        <p><img style="width:90%" src="img/holos_screenshot.png"></p>
+        <p>Access: stamen, Password: taricha</li>
+    </div>
+
+
+    <div id="holos-2" class="step slide" data-x="3000" data-y="800">
+        <p><strong>Focus of Stamen Work</strong></p>
+        <p><a href="http://holos.berkeley.edu/explore">holos.berkeley.edu/explore</a></p><br>
+        <p><strong>Deliverables</strong> (from a Developer's point of view)</p>
+        <p>- single page app whill will be served as static using Django Mezzanine</p>
+        <p>- implemented in a extendable and modular way</p>
+        <p>- currently (very basal) Angular JS (not locked in yet)
+        <p>- functionality of Ecoengine should be brought to the front</p>
+        <p class="question">The application should make it easy to explore our resources BUT
+        it should be also a gateway to the API itself</p>
+        <p>E.g. copying of URIs for use in different contexts</p>
+    </div>
+
+    <div id="ecoengine-1" class="step slide" data-x="4000" data-y="0">
+        <p><strong>The Ecoengine API</strong></p><br>
+        <p>Mostly self-documenting API based on Django Restframework</p><br>
+        <p>Main entry point: <a href="https://dev-ecoengine.berkeley.edu/api/">/api/</a></p>
+        <p>Documentation: <a href="https://dev-ecoengine.berkeley.edu/docs/">/docs/</a></p>
+        <br>
+        <p class="question">Please use development version: https://dev-ecoengine.berkeley.edu</p>
+        <br>
+        <p>During development, we will change it only if you run into trouble - I promise!</p>
+    </div>
+
+    <div id="ecoengine-2" class="step slide" data-x="4000" data-y="800">
+        <p><strong>Data types and structures</strong></p>
+        <ul>
+            <li>Wieslander Vegetation Type Mapping <a href="http://vtm.berkeley.edu:8000">vtmveg.berkeley.edu:8000</li>
+        </ul>
+    </div>
+
+    <div id="geo1" class="step slide" data-x="5000" data-y="0">
+        <p><strong>Geospatial Features of the API</strong></p>
+        <ul>
+            <li>Data is in flux, always introspect models:</li>
+            <ul>
+                <li>/api/layers/</li>
+                <li>/api/rstore/</li>
+            </ul>
+        </ul>
+
+    </div>
+
+    <div id="geo2" class="step slide" data-x="5000" data-y="800">
+        <p><strong>Map tiles</strong></p>
+        <br>
+        <a href="http://jsfiddle.net/postfalk/qqhcu9zm/1/">Example</a>
+    </div>
+
+    <div id="discussion" class="step slide" data-x="6000" data-y="0">
+        <q>Thank you!</q>
+        <p>schuetzenmeister@berkeley.edu</p>
+    </div>
+
+
+</div>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>

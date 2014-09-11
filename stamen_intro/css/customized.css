@@ -1,0 +1,52 @@
+.step {
+    color: #317eac;
+    line-height: 1.5em;
+}
+
+.step h1 {
+    font-size: 18 !important;
+}
+
+.step ul, ol {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.step li {
+    font-size: .9em;
+    line-height: 1.2em;
+}
+
+.step ul ul {
+    margin-top: .5em;
+    margin-left: 2em;
+    margin-bottom: .5em;
+    font-size: .7em;
+    line-height: 1.2em;
+}
+
+.step ul li {
+    margin-bottom: .5em;
+    margin-top: .5em;
+}
+
+.step ul ul li:before {
+    content: '- ';
+    display: inline;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.small-img {
+    max-width: 350px;
+    max-height: 270px;
+}
+
+.smaller-text {
+    font-size: .8em;
+    line-height: 1.2em;
+}
+
+.question {
+    color: #ee4e32;
+}
