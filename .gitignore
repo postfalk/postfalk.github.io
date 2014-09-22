@@ -1,5 +1,4 @@
 vendors/
 node_modules/
-bower_components/
 .*swp
 .*swo
