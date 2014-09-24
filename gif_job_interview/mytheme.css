@@ -31,9 +31,24 @@ body {
   background: #ff5e99;
   text-shadow: none; }
 
+
+.reveal .conclusion {
+    color: #ee4e32;
+}
+
 /*********************************************
  * HEADERS
  *********************************************/
+.reveal h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50pt;
+}
+
+.reveal li {
+    margin-top: 1.2em;
+}
+
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -43,9 +58,11 @@ body {
   margin: 0 0 20px 0;
   color: #663300;
   font-family: "League Gothic", Impact, sans-serif;
-  line-height: 0.9em;
+  line-height: 1.3em;
   letter-spacing: 0.02em;
-  text-transform: uppercase;
+  /* text-transform: uppercase;
+}
+
 
 /*********************************************
  * LINKS
