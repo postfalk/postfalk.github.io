@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+/* @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 @font-face {
   font-family: 'League Gothic';
   src: url("../vendors/reveal.js-2.6.2/lib/font/league_gothic-webfont.eot");
@@ -34,6 +34,14 @@ body {
 
 .reveal .conclusion {
     color: #ee4e32;
+}
+
+.reveal .graph {
+    position: absolute; 
+    top:200px;
+    left:100px;
+    width: 2500px;
+    margin: -300px,-300px,-300px,-300px;
 }
 
 /*********************************************

@@ -49,11 +49,11 @@
                 <section>
                     <h3>Overview</h3>
                     <ul>
-                        <li>My Background: research management as practical problem</li>
-                        <li>Data Science and GIS</li>
+                        <li>My Background</li>
+                        <li>Geospatial Data Science</li>
                         <ul>
-                            <li>Example 1: Data collection</li>
-                            <li>Example 2: Data distribution</li>
+                            <li>Example 1: Statewide collection of ecological data</li>
+                            <li>Example 2: Data sharing and distribution through an RESTful API</li>
                         </ul>
                     <li>Continuing the Great Work of the GIF</li>
                     </ul>
@@ -68,7 +68,7 @@
                         <li>Findings:</li>
                             <ul>
                                 <li>Modern research is highly organized</li>
-                                <li>New roles such as programmers, administrators, technicians becoming more important</li>
+                                <li>New roles such as programmers, administrators, technicians are becoming increasingly important</li>
                                 <li>Universities need to adapt and create structures that can balance organization and traditional faculty roles</li>
                             </ul>
                     </ul>
@@ -87,28 +87,24 @@
                             <li>Community building</li>
                             <li>Innovation</li>
                         </ul>
+                        <p class="conclusion fragment" style="margin-top:40pt">Boundary Work: connecting different spheres, e.g. providing GIS or programming expertise to scientists, communicate scientific findings to the public or policy makers (Caladapt) </p>
                     </section>
                     <section>
                         <h2>Problems:</h2>
                         <ul>
-                            <li>Limited financial resources at the university compared to the high tech industry</li>
-                            <li>Non-academic career paths and staff acknowledgement</li>
+                            <li>Limited financial resources at the university compared to the high tech industry. What would be incentives for very good developers to join the GIF?</li>
+                            <li>Non-academic career paths are not well established at the university.</li>
                             <li>Those issues are also discussed at the Berkeley Institute of Data Science (BIDS)&mdash;ethnography program</li>
-                            <li class="conclusion">GIF as an experiment in data science as a new profession at the university?</li>
+                            <li class="conclusion fragment">GIF as an experiment in data science as a new profession at the university?</li>
                         </ul>
                     </section>    
                 </section>
 
                 <section>
-                    <section>
-                        <h3>Data</h3>
-                        <h3>Information</h3>
-                        <h3>Knowlegde</h3>
-                    </section>
-                    <section>
-                        <h2><span class="fragment" data-fragment-index="2">Geospatial </span><span>Data Science</span></h2>
-                        <p class="fragment" data-fragment-index="0">Definition</p>
-                        <p class="fragment" data-fragment-index="1">... oh well</p>
+                     <section>
+                         <h3><strong>Data Science</strong></h3> 
+                         <br>
+                         <p class="fragment conclusion">A preliminary definition: Reproducible methods to extract knowledge from data: scientific, technological, and social dimensions</p>
                     </section>
                     <section>
                         <ul>
@@ -118,6 +114,31 @@
                             <li>Data processing: algorithms, software, and computing</li>
                             <li>Communication and outreach</li>
                         </ul>
+                    </section>
+                    <section>
+                        <h3><strong>Geospatial Data</strong></h3> 
+                        <br>
+                        <p class="fragment conclusion">Data that can 
+                            be related and analyzed on the basis of space (and time) as organizing
+                            principles.</p>
+                    </section>
+                    <section>
+                        <h3>Relevanz for ecological research</h3>
+                        <ul>
+                            <li>Ecological data is sampled data, space and time allow for the reconstruction of context.</li>
+                            <li>Species distribution modeling as case in point</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Ecological data science</h3>
+                        <p>A network of observations, people, and computers</p>
+                        <div style="height:800px;">
+                        <img class="fragment graph" src="../img/step1.png">
+                        <img class="fragment graph" src="../img/step2.png">
+                        <img class="fragment graph" src="../img/step3.png">
+                        <img class="fragment graph" src="../img/step4.png">
+                        <img class="fragment graph" src="../img/step5.png">
+                    </div>
                     </section>
                 </section>
 
@@ -147,8 +168,22 @@
                            <li>Citizen science data from Calflora</li>
                            <li>Expert knowledge from about 400 land managers and botanists</li>
                            <li>Species distribution modeling</li>
+                           <li>Reliable absent data needed</li>
                        </ul>
                    </section>
+                   <section>
+                       <h4>Data Collection as an iterative process</h4>
+                       <img src="../img/drawing.png">
+                   </section>
+                    <section>
+                       <h4>The problem of expert knowledge</h4>
+                       <img src="../img/schema.png">
+                   </section>
+                  <section>
+                       <h4>Example: Acroptilon repens</h4>  
+                     <img src="../img/cwm.png">
+                     <a href="http://calweedmapper.cal-ipc.org/maps/">calweedmapper.cal-ipc.org</a>
+                  </section>
                 </section>
 
                 <section>
@@ -159,7 +194,63 @@
                         <p><img src="../img/holos.png" style="max-height:100pt"></p>
                         <p><a href="https://ecoengine.berkeley.edu">ecoengine.berkeley.edu</a></p>
                         <p style="font-size:smaller">funded by the W.M. Keck foundation</p>
-                    </section>    
+                    </section>
+                    <section>
+                        <h3>RESTful API</h3>
+                        <p class="conclusion">Application Programming Interface: 
+                        A well defined and documented interface for applications to interact with each other.
+                        </p>
+                        <br>
+                        <p class="conclusion">RESTful APIs utilizing the http protocol. Users can usually communicate through well
+                        defined URL patterns (or by posting data to the API).</p>
+                        <br>
+                        <p>Example:</p>
+                        <p><a href="https://ecoengine.berkeley.edu/api/observations/?genus=puma">https://ecoengine.berkeley.edu/api/observations/?genus=puma</a></p>
+                    </section>
+                    <section>
+                        <h3>Advantages</h3>
+                        <ul>
+                            <li>Returns are machine-readable.</li>
+                            <li>Data can be used in many contexts: web applications, software packages, desktop GIS</li>
+                            <li>It is a open data sharing format that can be accessed in most coding languages</li>
+                            <li>Web applications can be light-weight and focused on single purposes</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Event data</h3>
+                        <ul>
+                            <li>5 million museum specimen across all kingdoms (about 10 to 20 million by the end of the project)</li>
+                            <li>a collection of about 60,000 photos reflecting ecological change in California</li>
+                            <li>detailed soil sample data of about 20,000 locations</li>
+                            <li>sensor data from UC California's field station system</li>
+                            <li>historic vegetation survey data</li>
+                            <li>historical ecological data obtained from drill cores, e.g. from lake beds</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>CONTINOUS SURFACES (several TB, mostly geospatial rasters)</h3>
+                        <li>climate data (daily, historical, observed, projected)</li>
+                        <li>soil, vegetation, elevation</li>
+                        <li>landuse, land ownership, political</li>
+                        <li>...</li>
+                    </ul>
+                    </ul>
+                    </p>
+                    </section>
+                    <section>
+                        <iframe src="https://ecoengine.berkeley.edu/api/" width="1200" height="1000"></iframe>
+                    </section>
+                    <section>
+                        <h3>Project structure</h3>
+                        <p>
+                        <img src="../img/model.png">
+                        </p>
+                    </section>
+                    <section>
+                        <h3>The application model</h3>
+                        <h4>Rebuilding the VTM web site</h4>
+                        <iframe src="http://vtm.berkeley.edu:8000" width="1200" height="800"></iframe>
+                    </section>
                 </section>
 
                 <section>
@@ -169,10 +260,10 @@
                     <section>
                         <h2>A brief "history" of GIF</h2>
                         <ul>
-                            <li>started as a remote sensing imaging facility (this aspect should be revived)</li>
+                            <li>started as a remote sensing imaging facility</li>
                             <li>pioneering GIS on campus under Maggi Kelly's leadership</li>
                             <li>leading in development of geospatial web applications: Cal-adapt, landcarbon</li>
-                            <li class="conclusion">We have a big chance to join the data science efforts on campus and adding the spatial aspect.</li>
+                            <li class="conclusion">We have a big chance to join the data science efforts on campus and presenting the spatial aspect.</li>
                         </ul>
                     </section>
                     <section>
@@ -189,17 +280,42 @@
                         </ul>
                     </section>
                     <section>
+                        <h2>What about GIS?</h2>
+                        <ul>
+                            <li>ArcGIS and ArcGIS server are still leaders in the industry</li>
+                            <li>Tool box approach to GIS</li>
+                            <li>Embracing scripting and coding</li>
+                            <ul>
+                                <li>ArcPy</li>
+                                <li>R and Python</li>
+                                <li>Google Earth Engine</li>
+                            </ul>
+                            <li>Develop assets in a way that they are accessible to Desktop GIS</li>
+                            <li>Supporting the Geospatial Open Source Community</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Products of the GIF</h3>
+                        <ul>
+                            <li>Students familiar with latest methods in geospatial data science (Development of new courses)</li>
+                            <li>Web applications to help to understand the changing world</li>
+                            <li>Highly employable developers</li>
+                            <li>Scientific papers</li>
+                            <li>A geospatial community</li>
+                            <li>Software tools</li>
+                            <li>Contributions to Data Science on Campus</li>
+                        </ul>
+                    </section>
+                    <section>
                         <h3 class="conclusion">The Internet will remain our preferred way of product delivery and publishing. 
-                            However with the focus on data science our work will move away from pure 
-                            web development.</h3>
+                            However with the focus on data science our work will entail much more than web development.                       
+                        </h3>
                     </section>
-                    <section>
-                        <h3 class="conclusion">I would like the GIF to work more scientifically in research. At the same time
-                        we should embrace collective methods of software development.</h3>
-                    </section>
-                    <section>
-                        <h2>Staff development</h2>
-                    </section>
+
+                </section>
+
+                <section>
+                    <h2><strong>Thank you very much.</strong></h2>
                 </section>
 
 			</div>
