@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Falk Sch&uuml;tzenmeister</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../bower_components/reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="mytheme.css" id="theme">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../bower_components/reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = '../bower_components/reveal.js/css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+            <!-- CONTENT --->
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+                <section>
+                    <h1>Data Management for Data Science</h1>
+                    <h3>The Berkeley Ecoinformatics Engine as an Example</h3>
+                    <br><br>
+                    <p>Falk Schuetzenmeister, PhD</p>
+                    <p>schuetzenmeister@berkeley.edu</p>
+				</section>
+            
+                <section>
+                    <h3><b>Berkeley Ecoinformatics Engine</b></h3>
+                    <br>
+                    <br><a href="https://ecoengine.berkeley.edu">ecoengine.berkeley.edu</a></br>
+                    <br>
+                    <br>
+                    <p>
+                        <img src="../img/holos.png" style="max-width:300px;max-height:200px;width=auto;height=auto;margin-left:30px">
+                        <img src="../img/MVZ_logo.jpg" style="max-width:300px;max-height:200px;width=auto;height=auto;margin-left:30px">
+                        <img src="../img/CCH_logo.png" style="max-width:300px;max-height:200px;width=auto;height=auto;margin-left:30px">
+                        <img src="../img/bnhm_logo.gif" style="max-width:300px;max-height:200px;width=auto;height=auto;margin-left:30px">
+                        <img src="../img/GIF_logo.jpg" style="max-width:300px;max-height:200px;width=auto;height=auto;margin-left:30px">
+                        <img src="../img/ropensci_logo.png" style="max-width:300px;max-height:200px;width=auto;height=auto;margin-left:30px">
+                        <img src="../img/bigcb_logo.png" style="max-width:300px;max-height:200px;width=auto;height=auto;margin-left:30px">
+                    </p><p>
+                        <img src="../img/keck_logo.jpg" style="max-width:300px;max-height:200px;width=auto;height=auto;margin-left:30px">
+                    </p>
+                </section>
+                <section>
+                    <h3><b>Berkeley Ecoinformatics Engine</b></h3>
+                    <p>The goal and focus of development has been the integration of ecological data that allows for:</p>
+                    <ul>
+                        <li>Data discovery in context, e.g. vicinity of species</li>
+                        <li>Enriching species records with environmental information derived from raster surfaces</li>
+                        <li>Time and space as relating concepts for heterogeneous data</li>
+                        <li>Full text search across resources</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3><b>Current Data Assets</b></h3>
+                    <ul>
+                        <li>5 million specimen records of all taxa</li>
+                        <li>historic photos, indicating ecological change in CA</li>
+                        <li>Wieslander Vegetation Type Mapping</li>
+                        <li>Plot surveys (historic and recent)</li>
+                        <li>Species checklists from field stations</li>
+                        <li>Pollen records from drill cores (upcoming)</li>
+                        <li>Historic soil surveys (upcoming)</li>
+                        <li>Sensor data from field stations</li>
+                        <li>Geophysical and climatic surfaces</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3><b>Common problems in web application development</b></h3>
+                    <ul>
+                        <li>different life cycles of data and front end</li>
+                        <li>feature requests from different stakeholders make web sites convoluted</li>
+                        <li>web site cannot present all possible uses of a data set</li>
+                        <li>locked-in data</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3><b>A solution:</b></h3>
+                    <ul>
+                        <li>separation between data web services and frontend/application development</li>
+                        <li>RESTful APIs</li>
+                        <ul>
+                            <li class="conclusion">One backend can support many special purpose applications</li>
+                            <li class="conclusion">Interoperability through minimal standards</li>
+                            <li class="conclusion">Applications can draw on more than one single API</li>
+                            <li class="conclusion">RESTful APIs are not a particular technology, they are an architectural principle
+                            (see Roy Fielding 2000)</li>
+                            <li class="conclusion">Most cloud services are using RESTful APIs to interact</li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Architecture</h3>
+                    <div style="height:1000px">
+                        <img class="graph" src="../img/pic1.svg">
+                        <img class="fragment graph" src="../img/pic2.svg">
+                        <img class="fragment graph" src="../img/pic3.svg">
+                        <img class="fragment graph" src="../img/pic4.svg">
+                        <img class="fragment graph" src="../img/pic5.svg">
+                        <img class="fragment graph" src="../img/pic6.svg">
+                </div>
+                </section>
+                <section>
+                    <h3>RESTful API</h3>
+                    <p class="conclusion">Application Programming Interface (API):
+                    A well defined and documented interface for applications to interact with each other.
+                    </p>
+                    <br>
+                    <p class="conclusion">RESTful APIs utilizing the http protocol. Users can usually communicate through well
+                    defined URL patterns (or by posting more complex data to the API using POST requests).</p>
+                    <br>
+                    <p>Example:</p>
+                    <p><a href="https://ecoengine.berkeley.edu/api/observations/?genus=puma">https://ecoengine.berkeley.edu/api/observations/?genus=puma</a></p>
+                </section>
+                <section>
+                    <h3>Advantages</h3>
+                    <ul>
+                        <li>Returns are machine-readable.</li>
+                        <li>Data can be used in many contexts: web applications, software packages, desktop GIS</li>
+                        <li>It is a open data sharing format that can be accessed in most coding languages</li>
+                        <li>Web applications can be light-weight and focused on single purposes</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Disadvantages</h3>
+                    <ul>
+                        <li>Latency and download speed provide limits to the concept of the web as a database</li>
+                        <li>Requires still applications that aggregate returns, functionality that makes the API potentielly convoluted</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>What is next?</h3>
+                    <ul>
+                        <li>Social API of sensors and events</li>
+                        <li>Data Science within a http response cycle</li>
+                        <li>Implement workflow steps to deliver modeling building blocks via API</li>
+                    </ul>
+                </section>    
+
+                <section>
+                    <h2><strong>Thank you very much.</strong></h2>
+                </section>
+
+			</div>
+            <!-- END CONTENT -->
+		</div>
+		<script src="../bower_components/reveal.js/lib/js/head.min.js"></script>
+		<script src="../bower_components/reveal.js/js/reveal.min.js"></script>
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+	</body>
+</html>
