@@ -66,12 +66,12 @@
                 </section>
                 <section>
                     <h3><b>Berkeley Ecoinformatics Engine</b></h3>
-                    <p>The goal and focus of development has been the integration of ecological data that allows for:</p>
+                    <p>The goal of the development has been new ways of integrating ecological data that allows for:</p>
                     <ul>
-                        <li>Data discovery in context, e.g. vicinity of species</li>
-                        <li>Enriching species records with environmental information derived from raster surfaces</li>
-                        <li>Time and space as relating concepts for heterogeneous data</li>
-                        <li>Full text search across resources</li>
+                        <li>Data discovery in context, e.g. vicinity of species, climatic envelopes, etc.</li>
+                        <li>Enrichment of species records with environmental information derived from raster surfaces</li>
+                        <li>Time and space are central concepts to relate heterogeneous data removed from context during a collection event</li>
+                        <li>Search and discovery across different data types e.g. photos, drill cores, or even anthropological data</li>
                     </ul>
                 </section>
                 <section>
@@ -89,26 +89,26 @@
                     </ul>
                 </section>
                 <section>
-                    <h3><b>Common problems in web application development</b></h3>
+                    <h3><b>Problems of data delivery through complex web application</b></h3>
                     <ul>
-                        <li>different life cycles of data and front end</li>
-                        <li>feature requests from different stakeholders make web sites convoluted</li>
-                        <li>web site cannot present all possible uses of a data set</li>
-                        <li>locked-in data</li>
+                        <li>different life cycles of data and web pages</li>
+                        <li>feature requested from different stakeholders make web sites often convoluted</li>
+                        <li>a website not able to present all possible uses and audiences of a data sets</li>
+                        <li>"locked-in data" (need to download for further analysis)</li>
                     </ul>
                 </section>
                 <section>
                     <h3><b>A solution:</b></h3>
                     <ul>
-                        <li>separation between data web services and frontend/application development</li>
+                        <li>strict separation between data services and frontend applications</li>
                         <li>RESTful APIs</li>
                         <ul>
-                            <li class="conclusion">One backend can support many special purpose applications</li>
-                            <li class="conclusion">Interoperability through minimal standards</li>
+                            <li class="conclusion">One backend can support several general as well as special purpose applications</li>
+                            <li class="conclusion">Interoperability through minimal standards based on http</li>
                             <li class="conclusion">Applications can draw on more than one single API</li>
                             <li class="conclusion">RESTful APIs are not a particular technology, they are an architectural principle
-                            (see Roy Fielding 2000)</li>
-                            <li class="conclusion">Most cloud services are using RESTful APIs to interact</li>
+                            (see Roy Fielding 2000) geared toward distributed computing</li>
+                            <li class="conclusion">Most cloud services are using RESTful APIs to interact which each other: Google Maps, Facebook, ESRI server</li>
                         </ul>
                     </ul>
                 </section>
@@ -149,7 +149,22 @@
                     <ul>
                         <li>Latency and download speed provide limits to the concept of the web as a database</li>
                         <li>Requires still applications that aggregate returns, functionality that makes the API potentielly convoluted</li>
+                        <li>Most suitable for slicing data and query by certain parameters or retrieve aggregated values, less useful if entire dataset is required</li>
                     </ul>
+                </section>
+                <section>
+                    <h3>The social dimension</h3>
+                        <ul>
+                            <li>An API is technically not very hard to implement (there are very good packages out there: DjangoRestFramework)</li>
+                            <li>Challenges are mostly of a social nature:</li>
+                            <ul>
+                                <li class="conclusion">Definition of vocabulary, URL design, persistence, extensibility, and versioning</li>
+                                <li class="conclusion">Develop API in parallel with teams that create consumers, test standards and communication</li>
+                                <li class="conclusion">Data curation</li>
+                                <li class="conclusion">Documentation is everything</li>
+                                <li class="conclusion">Access control, and throttling policies</li>
+                            </ul>
+                        </ul>
                 </section>
                 <section>
                     <h3>What is next?</h3>
@@ -158,7 +173,7 @@
                         <li>Data Science within a http response cycle</li>
                         <li>Implement workflow steps to deliver modeling building blocks via API</li>
                     </ul>
-                </section>    
+                </section>
 
                 <section>
                     <h2><strong>Thank you very much.</strong></h2>
