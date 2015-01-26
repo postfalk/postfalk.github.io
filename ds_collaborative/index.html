@@ -1,0 +1,223 @@
+<!doctype html>
+
+<!--
+    
+    So you'd like to know how to use impress.js?
+    
+    You've made the first, very important step - you're reading the source code.
+    And that's how impress.js presentations are built - with HTML and CSS code.
+    
+    Believe me, you need quite decent HTML and CSS skills to be able to use impress.js effectively.
+    And what is even more important, you need to be a designer, too, because there are no default
+    styles for impress.js presentations, there is no default or automatic layout for them.
+    
+    You need to design and build it by hand.
+    
+    So...
+    
+    Would you still like to know how to use impress.js?
+    
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Thunder talk Falk Schuetzenmeister</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="css/customized.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div id="front" class="step slide" data-x="0" data-y="0">
+        <p>BIDS thunder talk</p>
+        <q>
+            <strong>Data Science and Ecological Data</strong>
+        </q>
+        <p>Falk Schuetzenmeister</p>
+        <br><br>
+        <p>September 4, 2014</p>
+        <table>
+            <tr>
+                <td>Web Application Developer
+                Geospatial Innovation Facility
+                College of Natural Resources
+                </td>
+                <td>
+                    <img class="small-img" src="img/holos.png">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div id="bee" class="step slide" data-x="2000" data-y="0">
+        <p><strong>ecoengine.berkeley.edu</strong></p>
+        <p>A RESTful API serving UC Berkeley's natural history data.</p>
+            <ul>
+                <li>EVENT DATA (defined by a locality and time)</li>
+                <ul>
+                    <li>5 million museum specimen across all taxa (about 10 to 20 million by the end of the project)</li>
+                    <li>a collection of about 60,000 photos reflecting ecological change in California</li>
+                    <li>sensor data from UC California's field station system</li>
+                    <li>historic vegetation survey data</li>
+                </ul>
+                <li>CONTINOUS SURFACES (several TB, mostly geospatial rasters)</li>
+                <ul>
+                    <li>climate data (daily, historical, observed, projected)</li>
+                    <li>landuse, land ownership, political</li>
+                    <li>...</li>
+                </ul>
+            </ul>
+        </p>
+    </div>
+
+    <div id="bee_a" class="step slide" data-x="2000" data-y="800">
+        <img class="small-img" src="img/specimen.jpg">
+        <img class="small-img" src="img/layer1.jpg">
+        <img class="small-img" src="img/vegmap.jpg"><br>
+        <img class="small-img" src="img/original.jpeg">
+        <img class="small-img" src="img/reshoot.jpeg">
+    </div>
+
+    <div id="bee2" class="step slide" data-x="2000" data-y="2400">
+        <p><strong>Time and location as organizing principles</strong></p>
+        <ul>
+            <li>Species distribution modeling and niche theory</li>
+            <li>Global change as concern</li>
+            <li>Space and time as smallest common denominator</li> 
+            <li class="question">BUT: Ecological data is removed from its context, space and time are ways to feed back context.</li>
+            <li>Museum specimen hold more information (DNA).</li>
+            <li cass="question">How to create resources that make recontextualization of ecological data possible?</li>
+            <li class="question"><strong>Please help!!!</li>
+        </ul>
+    </div>
+
+    <div id="bee3a" class="step slide" data-x="2000" data-y="4000">
+        <p><strong>Conceptual model</strong></p>
+        <img src="img/model.jpg">
+    </div>
+
+    <div id="bee4" class="step slide" data-x="2000" data-y="4800">
+        <p><strong>Example: data extraction and aggregation</strong></p>
+        <br>
+        <ul>
+        <li>Common task in ecological research is to enrich an occurrence of a species with environmental data obtained from geospatial layers</li>
+       <ul>
+          <li>A small amount of data gets retrieved from large data sets.</li>
+         <li>Aggregation of data is very common, e.g. monthly coldest temperature, or coldest month of the year, etc.</li>
+    </ul>
+        </ul>
+        <img class="small-img" src="img/data_extraction.jpg" style="display:block;right-align:auto;left-align:auto">
+    </div>
+
+    <div id="bee5" class="step slide" data-x="2000" data-y="5600">
+        <p><strong>Example: the application model</strong></p>
+        <ul>
+            <li>Very different uses for the data: scientific and non-scientific.</li>
+            <ul>
+                <li>Web applications for research, citizen science, education, land management, and data journalism</li>
+                <li>Desktop GIS software</li>
+                <li>Scientific computing frameworks such as rOpenSci</li>
+            </ul>
+        <a href="http://vtm.berkeley.edu:8000">Example: Wieslander Vegetation Type Mapping</a>
+    </div>
+
+
+    <div id="domain" class="step slide" data-x="3000" data-y="0">
+        <p><strong>Domain specific problems</strong></p>
+        <ul>
+        <li class="question">
+            Data is messy and biased:
+        </li>
+            <ul>
+                <li>biases: towards interest of collectors/curators, accessibility roads/settlements, changing research interests</li>
+                <li>data collection by many different people over more then 100 years</li>
+                <li>no leading theory, high number of fields, normalization and standardization rudimentary</li>
+            </ul>
+        <li class="question">
+            Too little data science and software engineering expertise:
+        </li>
+            <ul>
+                <li>What needs to be done to achieve a good requirement management related to the cutting edge of research?</li>
+            </ul>
+        <li class="question">
+            How to represent fundamental ecological thinking in our data models?
+        </li>
+            <ul>
+                <li>
+                    Are RMDBS really appropriate for ecological data?
+                </li>
+            </ul>
+        <li class="question">
+            Only few theoretical approaches that can be translated in numerical algorithms.
+        </li>
+        <ul>
+            <li>species distribution modeling</li>
+            <li>genetics as a promising case</li>
+        </ul>
+        </ul>
+    </div>
+
+    <div id="questions" class="step slide" data-x="4000" data-y="0">
+        <p><strong>Resulting questions: Data science as web service?</strong></p><br>
+        <p>Our data is not outragously big BUT we have to process our data within the request-response-cycle on the web (ideally within one second).</p>
+        <p class="question">What data science technologies can be applied?</p>
+        <p>The work flows in our field need to be studied more thoroughly</p>
+        <p class="question">What functionality can be effectively delivered by a RESTful API?</p>
+    </div>
+
+    <div id="questions1" class="step slide" data-x="4000" data-y="800">
+        <p><strong>Example Search Engine</strong><p></p>
+        <ul>
+            <li>The Ecoengine deploys ElasticSearch in the backend.</li>
+            <li>Proved to be much more powerful than we thought</li>
+            <li>Faceted search provides aggregations of occurrences.</li>
+        </ul>
+        <a href="https://dev-ecoengine.berkeley.edu/api/search/?q=genus_exact:quercus">https://dev-ecoengine.berkeley.edu/api/search/?q=genus_exact:quercus</a>
+    </div>
+ 
+    <div id="questions2" class="step slide" data-x="4000" data-y="1600">
+        <p><strong>Example rOpenSci</strong></p>
+        <br>
+        <a href="http://ropensci.org/tutorials/ecoengine_tutorial.html">http://ropensci.org/tutorials/ecoengine_tutorial.html</a>
+    </div>
+   
+    <div id="goals" class="step slide" data-x="5000" data-y="0">
+        <p><strong>My goals at BIDS</strong></p>
+        <ul>
+            <li>Promoting RESTful APIs as an important building block in reproducible science.</li>
+            <li>Create a new way to think about very heterogenous and distributed ecological data: Putting ecology back into ecological data.</li>
+            <li>Identify resources and work flows that can be a foundation for a virtual workbench of ecological science based on a whole array of RESTful APIs</li>
+            <li class="question">Products</li>
+            <ul>
+                <li><strong>Best Practices</strong> for interoperability of RESTful API's.</li>
+                <li><strong>Performance and Persistence</strong> of RESTful API's.</li>
+                <li><strong>Building User Communities around Web Services and API's.</strong>
+            </ul>
+            <li>I hope to develop the Ecoengine as a role model for a RESTful data service. I would like to collaborate with other fellows to apply my experience to another domain.</li>
+        </ul>
+    </div>
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+
+</div>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
