@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GeoDesign</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css"></link>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <style>
+      #map {height: 200px;}
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle
+layout: true
+background-image: url(TNCLogoPrimary_RGB.png)
+---
+# GeoDesign<br>Open Source Tools
+<br>
+#### Falk Schuetzenmeister
+
+#### GeoDesign Day 3/24/2016
+---
+### Spatial is not Special.
+---
+### Spatial is not Special!
+---
+### Spatial is not Special?
+---
+#### Yes, it is.
+
+![](grand_canyon.jpg)
+---
+#### No, it is not.
+
+![](computer.jpg)
+---
+#### Doch!
+
+![](bay_area.png)
+---
+## Agenda
+
+<br>
+
+1. Rethinking Mapping
+2. From Desktop GIS to Cloud Applications
+3. Design for Interoperability
+4. Conclusion: Improving work-flows
+5. Discussion, how should we learn as a team?
+---
+### Rethinking Mapping
+
+**Mapping**: An operation that associates each element of a given set (the domain) 
+with one or more elements of a second set (the range).
+
+![](mapping.svg)
+---
+### Visualization as Mapping Problem
+
+<br>
+
+Example: Brain Scan 
+
+http://atlas.brain-map.org/#atlas=1&plate=100960224&structure=399&x=5417.142857142858&y=3104.0000697544647&zoom=-3&resolution=11.97&z=5
+---
+### Computing Problems as Mapping Problems
+
+f(input) = output
+
+ES2015 (JavaScript) example:
+```JavaScript
+const numbers = [1, 2, 3, 4];
+let doubles = numbers.map(v => v * 2);
+console.log(doubles);
+
+```
+very similar to 
+```JavaScript
+import { projection } from './somewhere';
+
+let points = [[-121, 33], [-121.5, 32.5], [-123, 30.7]];
+let projected_points = points.map(projection);
+```
+---
+### Parallel Computing
+
+- MapReduce: tasks are mapped to nodes. Partial results are collected and reduced to an answer. 
+- E.g. maximum in a very huge raster: batches of pixels are mapped to different nodes, each returns the maximum of the batch, reducer function finds the highest value among the batches.
+
+<img src="map_reduce_algorithm.jpg" style="height:200px; width:auto;"></img>
+---
+### Mapping as Story Telling
+
+- ESRI Story Maps https://storymaps.arcgis.com/en/
+- New York Times d3.js maps
+---
+### Mapping as Chain of Transformations 
+
+- some are considered geographic, others not
+  
+  - field technicians work
+  - data input to magnetic storage format
+  - from one data format to another
+  - geographic transformations
+  - from GIS to display (electronic hardware)
+  - etc.
+
+---
+### Some Conclusions
+<br>
+
+- Spatial might not be special, BUT GIS has been dealing with interesting data problems for a long time.
+- Unfortunately, Desktop GIS obscured some of the basics: e.g. projections, mixing of data and presentation.
+- Thinking about mapping more broadly gives as more tools, which were not necessarily developed for geo-spatial in the first place: e.g. geoprocessing with NumPy arrays.
+---
+## From Desktop GIS to Cloud Applications
+---
+
+### Big Data and Small Devices
+
+|                    | Desktop | Web application | Cloud  |
+| :---               | :---    | :---            | :---   |
+| Storage            | low     | low             | high   |
+| Data throughput    | high    | low             | low    |
+| Computing capacity | medium  | low             | medium |
+
+---
+### 3 ways to bring your map to the browser
+
+1. **Slippy map** plugin: Leaflet.js, (traditional Google maps plugin, ESRI JavaScript, OpenLayers): display of pre-rendered raster images plus client-side rendered overlays.
+2. Direct rendering into HTML5 DOM using **SVG** (d3.js, mapsense.js), (overlaps with 1. since Leaflet is entirely build on svg): rendering of features client-side.
+3. **WebGL**, using the accelerated d3 graphics engine build into modern browsers (Mapbox, ESRI, and others): rendering of features client-side, 3D or 2D.
+---
+#### Example 1: Leaflet
+
+<br><div id="map"></div>
+
+```JavasScript
+var map = L.map('map').setView([37.80, -122.27], 14);
+L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}@2x.png').addTo(map);
+L.marker([37.80, -122.27], {icon: greenIcon}).addTo(map);
+```
+---
+#### Example 2: d3.js
+
+Population Change in California 2010-2012
+<br><div id="d3"></div>
+---
+## Improving work-flows
+
+- Version control: Git and GitHub
+- Jupyter and Python (and R for that matter)
+- JavaScript: JS fiddle and blo.cks.org
+---
+## How to get started on Windows?
+
+- Git: https://git-scm.com/
+- OSGeo4W: https://trac.osgeo.org/osgeo4w/ (over 150 packages including GDAL, OGR, QGIS, PostGIS)
+- Jupyter: http://jupyter.org/, **or** via Anaconda (more traditional Windows installer): https://www.continuum.io/downloads
+- ... and some decent text editor, e.g. Notepad++, Sublime, Komodo Edit, or Atom
+
+<img src="gitlogo.png" style="height:40px; width:auto; marging:10px;vertical-align:middle;">
+<img src="osgeo4w-logo.png" style="height:40px; width:auto; margin:10px;vertical-align:middle;">
+<img src="jupyter_logo.svg" style="height:40px; width:auto; margin:10px;vertical-align:middle;">
+<img src="python_logo.jpg" style="height:40px; width:auto; margin:10px;vertical-align:middle;">
+---
+## Git and GitHub
+
+- Git and GitHub are not the same!
+- **Git** is a version control system running on your local machine (and on any machine that interacts with Git repositories.)
+- Unfortunately, TNC did not vet Git for the use on their servers yet (there is a work-around).
+- Despite this hoop, I strongly recommend using Git whenever you create code (you can use it for many more things).
+- Limitations: not well suited for files that don't have a line-based text format, e.g. ShapeFiles (use GeoGIG later?).
+---
+## GitHub 
+
+- provides cloud-based GitHub repos
+- collaboration
+- web hosting
+- hooks for deployment, e.g. **Heroku**
+---
+## The Git Workflow
+
+```sh
+git init
+git add
+git commit
+git checkout
+git branch
+git push
+git pull
+git stash
+git merge
+git rebase
+git diff, git difftool
+git merge, git mergetool
+
+```
+---
+![](git.png)
+---
+# Jupyter
+---
+# JavaScript (getting started)
+---
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://d3js.org/topojson.v1.js"></script>
+    <script src="leaflet-example.js"></script>
+    <script>
+      var slideshow = remark.create({
+        slideNumberFormat: 'Slide %current% of %total%'
+      });
+      create_map();
+      create_3d();
+    </script>
+  </body>
+</html>
